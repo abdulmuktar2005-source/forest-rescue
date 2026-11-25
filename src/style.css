@@ -7,3 +7,18 @@
 #start-screen:not(.hidden)~.mobile-controls,#pause-screen:not(.hidden)~.mobile-controls,#victory-screen:not(.hidden)~.mobile-controls{display:none!important}
  .checklist{display:grid;grid-template-columns:1fr 1fr;gap:5px 10px;padding:0;margin:10px 0 0;list-style:none;color:#e8e5d7a3;font-size:9px;letter-spacing:.03em}.checklist li{display:flex;gap:6px;align-items:center;white-space:nowrap}.checklist b{font-size:8px;color:#d3c27c}.checklist li.active{color:#f3e5b8}.checklist li.done{color:#a9d1a0}.checklist li.done b{color:#a9d1a0}@media(max-width:700px){.checklist{gap:4px 8px;font-size:8px;margin-top:7px}}
  .checklist{grid-template-columns:1fr;gap:6px;margin-top:13px}.checklist li{display:flex;align-items:center;gap:8px;min-height:14px}.checklist li span{margin-left:auto;color:#e8dfbb;font-size:9px}.checklist li.locked{opacity:.48}.compass{width:98px;height:82px;left:50%;border-radius:22px;padding:8px 6px;background:rgba(25,45,36,.76);backdrop-filter:blur(8px)}.compass span{display:block;color:#eee5c5;font-size:8px;letter-spacing:.08em;white-space:nowrap}.compass div{font-size:25px;line-height:27px}.compass small{display:block;color:#d9ca91;font-size:10px;letter-spacing:.05em}.minimap{position:absolute;right:4.5vw;bottom:38px;width:126px;height:142px;padding:4px;border:1px solid #e7d79588;border-radius:8px;background:rgba(25,44,35,.76);box-shadow:0 6px 22px #16251d88;backdrop-filter:blur(8px)}.minimap canvas{display:block;width:116px;height:116px}.minimap span{display:block;text-align:center;color:#dfd4ad;font-size:7px;letter-spacing:.18em;margin-top:2px}#world{touch-action:none}@media(max-width:700px){.checklist{grid-template-columns:1fr 1fr;gap:4px 9px;margin:7px 0}.mission-card{width:min(318px,calc(100vw - 28px))}.compass{top:0;left:auto;right:50px;width:88px;height:78px}.minimap{right:13px;bottom:34px;width:100px;height:114px;padding:3px}.minimap canvas{width:92px;height:92px}.minimap span{font-size:6px}.inventory{top:52px}}
+
+/* Fernwood title screen: concise mission overview and grouped controls. */
+.title-card{width:min(520px,calc(100vw - 48px));margin:0 0 0 clamp(24px,9vw,150px);text-shadow:0 2px 30px #18231c66}
+.title-card h1{margin:16px 0 12px}
+.title-card .title-intro{max-width:440px;margin:0;color:#e2e4d9;font-size:14px;line-height:1.65}
+.journey{display:flex;align-items:center;gap:11px;margin-top:20px;color:#e3d39c;font-size:9px;font-weight:700;letter-spacing:.16em}
+.journey i{font-style:normal;color:#f4f0e56b}
+.title-card .primary-button{margin-top:23px}
+.title-card .controls-note{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:21px;padding-top:14px;border-top:1px solid #f4f0e52a;color:#eee9d8;font-size:9px;letter-spacing:.04em}
+.title-card .controls-note span{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.title-card .controls-note b{font-size:9px;white-space:nowrap}
+.title-card .controls-note small{font-size:8px;letter-spacing:.1em;opacity:.65}
+.title-card p.optional-note{margin:14px 0 0;padding:0;border:0;color:#d5d8cbb8;font-size:10px;line-height:1.45}
+#start-screen:not(.hidden)~.game-footer span:last-child{display:none}
+@media(max-width:700px){.title-card{width:min(430px,88vw);margin:0;align-self:center}.title-card h1{font-size:clamp(45px,12vw,62px);margin:14px 0 10px}.title-card .title-intro{max-width:370px;font-size:12px;line-height:1.6}.journey{gap:8px;margin-top:17px;font-size:8px;letter-spacing:.12em}.title-card .primary-button{margin-top:20px}.title-card .controls-note{gap:10px 5px;margin-top:17px;padding-top:12px}.title-card .controls-note b{font-size:8px}.title-card .controls-note small{font-size:7px}.title-card p.optional-note{margin-top:12px;font-size:9px}}

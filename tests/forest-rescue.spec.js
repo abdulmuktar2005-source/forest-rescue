@@ -11,9 +11,9 @@ test('loads the forest, handles controls and completes all three rescues', async
   await page.waitForFunction(() => window.forestRescue?.getState().loadedModels.length >= 20, null, { timeout: 30_000 });
   await expect(page.locator('.brand')).toContainText('FERNWOOD');
   await expect(page.locator('#loading-screen')).toHaveCount(0, { timeout: 10_000 });
-  await expect(page.locator('.how-to li')).toHaveCount(4);
-  await expect(page.locator('.how-to')).toContainText('gold compass arrow');
-  await expect(page.locator('.how-to')).toContainText('golden camp ring');
+  await expect(page.locator('.journey span')).toHaveText(['RESCUE', 'GATHER', 'REPAIR', 'RETURN']);
+  await expect(page.locator('.title-intro')).toContainText('in any order');
+  await expect(page.locator('.controls-note')).toContainText('INTERACT');
   const initialShot = await page.screenshot();
   expect(initialShot.byteLength).toBeGreaterThan(20_000);
   const loaded = await page.evaluate(() => window.forestRescue.getState());
