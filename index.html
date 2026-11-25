@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#172821" />
+    <meta name="description" content="Find the lost animals of Fernwood Forest before the mist settles." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Fernwood — Forest Rescue</title>
+  </head>
+  <body>
+    <div id="game-root">
+      <canvas id="world" aria-label="Fernwood Forest game"></canvas>
+      <div class="vignette"></div>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Fernwood home"><span class="brand-mark">✳</span><span>FERNWOOD<small>WILDLIFE RESCUE</small></span></a>
+        <div class="top-actions"><span class="weather-pill"><i></i> MISTY MORNING</span><button id="sound-toggle" class="icon-button" aria-label="Toggle sound">♫</button><button id="pause-button" class="icon-button" aria-label="Pause game">Ⅱ</button></div>
+      </header>
+      <section id="hud" class="hud hidden" aria-live="polite">
+        <div class="mission-card"><div class="eyebrow">FERNWOOD FIELD TASKS <span id="mission-count">0 / 5 DONE</span></div><h1 id="mission-title">Explore Fernwood</h1><p id="mission-copy">Choose any task. Follow the arrow, distance, and icons to find your next objective.</p><ol class="checklist"><li id="task-animals"><b>01</b> Animals <span>0 / 3</span></li><li id="task-fruit"><b>02</b> Fruit <span>0 / 5</span></li><li id="task-wood"><b>03</b> Wood <span>0 / 3</span></li><li id="task-bridge"><b>04</b> Bridge <span>No</span></li><li id="task-return" class="locked"><b>05</b> Return to camp <span>Locked</span></li></ol><div class="mission-progress"><span id="mission-progress"></span></div><div class="mission-bottom"><span id="mission-status">OBJECTIVES IN ANY ORDER</span><span id="rescued-count">0 / 3 RESCUED</span></div></div>
+        <div class="compass"><span id="objective-name">NEXT OBJECTIVE</span><div id="compass-needle">▲</div><small id="objective-distance">-- m</small></div>
+        <div class="inventory"><span class="inventory-icon">✦</span><span><b id="acorn-count">0</b><small>ACORNS</small></span></div>
+        <div id="toast" class="toast" role="status"></div>
+        <div class="minimap"><canvas id="mini-map" width="156" height="156" aria-label="Forest minimap"></canvas><span>FERNWOOD</span></div>
+      </section>
+      <div id="prompt" class="prompt hidden"><kbd>E</kbd><span>Press E to rescue</span></div>
+      <div id="start-screen" class="screen-screen">
+        <div class="title-card"><span class="overline"><i></i> A FERNWOOD TALE</span><h1>Somewhere,<br><em>someone</em> is waiting.</h1><p>The fog rolled in overnight. Find three wanderers, gather food, mend the bridge, and bring your new friends home. Complete tasks in any order.</p><ol class="how-to"><li><b>Rescue</b><span>Follow the gold compass arrow and press <kbd>E</kbd> near each animal.</span></li><li><b>Gather</b><span>Find 5 glowing berry bushes and 3 fallen branches whenever you like.</span></li><li><b>Repair</b><span>Take the branches to the creek bridge and press <kbd>E</kbd>.</span></li><li><b>Return</b><span>Guide all three friends into the golden camp ring after the other tasks.</span></li></ol><p class="optional-note">Golden leaves and acorns are optional. Drag to look, scroll to zoom. WASD/arrows move, Space jumps, Shift sprints, Esc pauses.</p><button id="start-button" class="primary-button">Begin the search <span>→</span></button><div class="controls-note"><span>WASD / ARROWS <small>MOVE</small></span><span>SHIFT <small>SPRINT</small></span><span>SPACE <small>JUMP</small></span><span>E <small>INTERACT</small></span><span>ESC <small>PAUSE</small></span></div></div>
+        <div class="title-foot"><span>FERNWOOD NATIONAL FOREST</span><span>DAY 014 · EARLY AUTUMN</span></div>
+      </div>
+      <div id="pause-screen" class="overlay-screen hidden"><div class="modal"><span class="overline">TAKE A BREATH</span><h2>The forest can wait.</h2><button id="resume-button" class="primary-button">Back to the trail <span>→</span></button><button id="restart-button" class="text-button">Start over</button></div></div>
+      <div id="victory-screen" class="overlay-screen hidden"><div class="modal victory-modal"><span class="victory-icon">✿</span><span class="overline">FERNWOOD IS WHOLE AGAIN</span><h2>Every little life<br>found its way home.</h2><p>All four missions are complete. The animals are home, the bridge is repaired, and Fernwood is safe.</p><p id="final-summary" class="final-summary"></p><div class="recap"><span><b id="final-acorns">0</b><small>ACORNS FOUND</small></span><span><b id="final-time">00:00</b><small>TIME IN THE WOODS</small></span></div><button id="play-again-button" class="primary-button">Wander again <span>→</span></button></div></div>
+      <div id="loading-screen" class="loading-screen"><div class="loading-brand">✳</div><span>Waking up the woods</span><div class="loading-track"><i id="loading-progress"></i></div></div>
+      <div id="error-screen" class="overlay-screen hidden"><div class="modal"><span class="overline">A LITTLE FOREST TROUBLE</span><h2>The trail didn't load.</h2><p id="error-copy">Check the console for details, then refresh the page.</p></div></div>
+      <footer class="game-footer"><span>FERNWOOD · FIELD NOTES VOL. 01</span><span>WASD / ARROWS MOVE&nbsp;&nbsp; · &nbsp;&nbsp;SHIFT SPRINT&nbsp;&nbsp; · &nbsp;&nbsp;SPACE JUMP&nbsp;&nbsp; · &nbsp;&nbsp;E RESCUE&nbsp;&nbsp; · &nbsp;&nbsp;ESC PAUSE</span></footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

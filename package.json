@@ -1,0 +1,22 @@
+{
+  "name": "forest-rescue",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --configLoader runner --host 0.0.0.0",
+    "build": "vite --configLoader runner build",
+    "preview": "vite --configLoader runner preview --host 0.0.0.0",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "vite": "^7.2.2",
+    "@playwright/test": "^1.56.1"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
